@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | EDGE</title>
+    <link rel="stylesheet" href="style.css">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!--============================================= Navigation bar =============================================-->
+
+	<div class="navigation-bar">
+		<ul class="navbar" id="navbar">
+			<a href="index.html"><img class="logo" src="images/logo-edge.png" alt="EDGE logo"></a>
+			<div class="nav-items">
+				<li ><a href="index.html">Home</a></li>
+				<li><a href="products.html">Shop</a></li>
+				<li  class="active-page-home"><a href="sanujaS3-quiz.html">Quiz</a></li>
+				<li><a href="Sanuja-s3-about.html">About</a></li>
+				<li><a href="Gayali-s4-thumbnails.html">Gallery</a></li>
+				<li><a href="kalindu-s2-query.html">Contact</a></li>
+				<li><a href="#"><i class="bx bx-shopping-bag"></i></a></li>
+			</div>
+		</ul>
+			
+	</div>
+
+<!--============================================= Body =============================================-->
+    <div class="quiz">
+        <h3>SPORTS QUIZ</h3>
+        <div class="to-start">
+            <p>This quiz contains Multiple Choice Questions. </p>
+            <p>Answer all the questions within the time limit of 60 seconds, by ticking the correct answer.</p>
+            <p>Every correct answer will get 2 points and every incorrect answer will remove 1 point from the total score</p>
+            <p><br> Press start button to start the timer</p>
+
+            <input type="button" id="start" value="start" class="startButton" onClick="startQuiz();">
+
+        </div>
+
+        <div class="after-start" id="after-start">
+            <div id="timerQuiz">
+                <p>Time Left&nbsp; :&nbsp;&nbsp;  <span id="timer">  60</span> &nbsp;&nbsp;seconds</p>
+            </div>
+
+            <form id="questions" name="questions">
+                <div class="question">
+
+                <p class="question1">1. What is the most watched Sports Event from the below answers? </p>
+    		        
+                <div class="ans">
+                    <input type="radio" name="q1" value="worng" >    Cricket World cup <br>
+    		        <input type="radio" name="q1" value="correct" >  FIFA World cup <br>
+                    <input type="radio" name="q1" value="wrong" >   NBA Finals <br>
+                    <input type="radio" name="q1" value="wrong">    Super Bowl <br>
+                    <p id="q1ans" class="qAns"> </p>
+                </div>
+
+                <p class="question2">2. What is the most popular sport in the world? </p>
+                <div class="ans">
+    		        <input type="radio" name="q2" value="correct">  Football <br>
+    		        <input type="radio" name="q2" value="wrong">    Basketball <br>
+                    <input type="radio" name="q2" value="wrong">    Rugby <br>
+                    <input type="radio" name="q2" value="wrong">    Cricket <br>
+                    <p id="q2ans" class="qAns"> </p>
+                </div>
+
+                <p class="question3">3. Which team won the NBA finals in 2019? </p>
+                <div class="ans">
+    		        <input type="radio" name="q3" value="wrong">    Golden State Warriors <br>
+    		        <input type="radio" name="q3" value="wrong">    Trail Blazers <br>
+                    <input type="radio" name="q3" value="wrong">    Nuggets<br>
+                    <input type="radio" name="q3" value="correct" > Toronto Raptors <br>
+                    <p id="q3ans" class="qAns"> </p>
+                </div>
+                <p class="question4">4. Which country won the 2014 - FIFA world cup finals? </p>
+                <div class="ans">
+    		        <input type="radio" name="q4" value="wrong">    Brazil <br>
+    		        <input type="radio" name="q4" value="wrong">    Argentina <br>
+                    <input type="radio" name="q4" value="correct">  Germany <br>
+                    <input type="radio" name="q4" value="wrong" >   Spain<br>
+                    <p id="q4ans" class="qAns"> </p>
+                </div>
+                <p class="question5">5. Who has the most runs in international cricket history? </p>
+                <div class="ans">
+    		        <input type="radio" name="q5" value="correct">  Sachin Tendulkar <br>
+    		        <input type="radio" name="q5" value="wrong">    Kumar Sangakkara <br>
+                    <input type="radio" name="q5" value="wrong">    Sanath Jayasuriya<br>
+                    <input type="radio" name="q5" value="wrong" >   Ricky Ponting<br>
+                    <p id="q5ans" class="qAns"> </p>
+                </div>
+                <p class="question6">6. Who is the all-time top goal scorer in football history? </p>
+                <div class="ans">
+    		        <input type="radio" name="q6" value="wrong">    Lionell Messi <br>
+    		        <input type="radio" name="q6" value="correct">  Cristiano Ronaldo <br>
+                    <input type="radio" name="q6" value="wrong" >   Ronaldo Nazario <br>
+                    <input type="radio" name="q6" value="wrong" >   Neymar Jr.<br>
+                    <p id="q6ans" class="qAns"> </p>
+                </div>
+                <p class="question7">7. What is the biggest sportswear brand in the world? </p>
+                <div class="ans">
+    		        <input type="radio" name="q7" value="wrong">    Adidas <br>
+    		        <input type="radio" name="q7" value="wrong">    Puma <br>
+                    <input type="radio" name="q7" value="wrong">    Kappa <br>
+                    <input type="radio" name="q7" value="correct" > Nike <br>
+                    <p id="q7ans" class="qAns"> </p>
+                </div>
+                <p class="question8">8. Who has the most titles in NBA history? </p>
+                <div class="ans">
+    		        <input type="radio" name="q8" value="correct">  Bill Russel <br>
+    		        <input type="radio" name="q8" value="wrong">    Sam Jones <br>
+                    <input type="radio" name="q8" value="wrong" >   Kobe Bryant<br>
+                    <input type="radio" name="q8" value="wrong" >   Lebron James <br>
+                    <p id="q8ans" class="qAns"> </p>
+                </div>
+                <p class="question9">9. Which country has won the most cricket worldcup titles? </p>
+                <div class="ans">
+    		        <input type="radio" name="q9" value="wrong">    India<br>
+    		        <input type="radio" name="q9" value="wrong">    England<br>
+                    <input type="radio" name="q9" value="correct" > Australia <br>
+                    <input type="radio" name="q9" value="wrong" >   New Zealand<br>
+                    <p id="q9ans" class="qAns"> </p>
+                </div>      
+                <p class="question10">10. Which team has the most UEFA Champions League titles in football? </p>
+                <div class="ans">
+    		        <input type="radio" name="q10" value="wrong">   Barcelona<br>
+    		        <input type="radio" name="q10" value="correct"> Real Madrid <br>
+                    <input type="radio" name="q10" value="wrong">   Liverpool<br>
+                    <input type="radio" name="q10" value="wrong" >  AC Milan <br>
+                    <p id="q10ans" class="qAns"> </p>
+                </div>
+                <h2 id="score"> </h2>
+                </div>
+                <div class="buttons-quiz">
+                    <input type="button" id="submit" value="Submit"  class="submitBtn" onclick="result();">
+                    <a href="sanujaS3-quiz.html" id="restart">Restart</a>
+                </div>
+            </form>
+            
+
+
+        </div>
+    </div>
+    <!--============================================= Footer =============================================-->
+	
+<div class="footer-container">
+	<div class="footer">
+		
+		<div class="footer-heading footer-1">
+			<h3>Menu</h3>
+			<a href="index.html">Home</a>
+			<a href="products.html">Men</a>
+			<a href="products.html">Women</a>
+			<a href="Gayali-s4-thumbnails.html">Gallery</a>
+		</div>
+		<div class="footer-heading footer-2">
+			<h3>Support</h3>
+			<a href="sanujaS3-quiz.html">Quiz</a>
+			<a href="Sanuja-s3-about.html">About Us</a>
+			<a href="kalindu-s2-query.html">Contact Us</a>
+			<a href="Gayali-s4-sitemap.html">Site Map</a>
+            <a href="additional-page.html">Additional Page</a>
+
+		</div>
+	</div>
+	<br>
+	<hr>
+	<div class="page-editor-link">
+		<a href="sanujaS3-page-editor.html">Page Editor</a>
+	</div>
+	
+</div>
+
+<!--============================================= JavaScript =============================================-->
+
+    <script>
+
+        function startQuiz(){
+            var timerQuiz=60;
+            document.getElementById("timer").innerHTML=timerQuiz;
+            startTimer();
+
+        }
+        function result(){
+            // replacing the timer with "time out" note
+            document.getElementById("timerQuiz").innerHTML="<p>Time Out</p>";
+            // defining variables with entered answers 
+            var qs1 = document.questions.q1.value;
+            var qs2 = document.questions.q2.value;
+            var qs3 = document.questions.q3.value;
+            var qs4 = document.questions.q4.value;
+            var qs5 = document.questions.q5.value;
+            var qs6 = document.questions.q6.value;
+            var qs7 = document.questions.q7.value;
+            var qs8 = document.questions.q8.value;
+            var qs9 = document.questions.q9.value;
+            var qs10 = document.questions.q10.value;
+            var score = 0
+
+            
+            // checking if the answer is correct and assigning marks accordingly
+            if (qs1=="correct"){
+                score+=2;
+                document.getElementById("q1ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q1ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :FIFA World Cup </span>")
+
+            }
+            if (qs2=="correct"){
+                score+=2;
+                document.getElementById("q2ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q2ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :Football </span>")
+
+            }
+            if (qs3=="correct"){
+                score+=2;
+                document.getElementById("q3ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q3ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :Toronto Raptors </span>")
+
+            }
+            if (qs4=="correct"){
+                score+=2;
+                document.getElementById("q4ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q4ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :Germany </span>")
+
+            }
+            if (qs5=="correct"){
+                score+=2;
+                document.getElementById("q5ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q5ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :Sachin Tendulkar </span>")
+
+            }
+            if (qs6=="correct"){
+                score+=2;
+                document.getElementById("q6ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q6ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :Cristiano Ronaldo </span>")
+
+            }
+            if (qs7=="correct"){
+                score+=2;
+                document.getElementById("q7ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q7ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :Nike  </span>")
+
+            }
+            if (qs8=="correct"){
+                score+=2;
+                document.getElementById("q8ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q8ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :Bill Russel </span>")
+
+            }
+            if (qs9=="correct"){
+                score+=2;
+                document.getElementById("q9ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q9ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :Australia</span>")
+
+            }
+            if (qs10=="correct"){
+                score+=2;
+                document.getElementById("q10ans").innerHTML="<span style='color: #009e60;'>Correct </span>";
+            }
+            else{
+                score--;
+                document.getElementById("q10ans").innerHTML=("<span style='color: red;'>Incorrect &nbsp;&nbsp;|&nbsp;&nbsp; Ans&nbsp;&nbsp; :Real Madrid </span>")
+
+            }
+            document.getElementById("score").innerHTML="Your Score &nbsp; : &nbsp;"+ score
+
+            // to change the background color
+            if (score>=15){
+        	 document.body.style.backgroundColor ="#D7AB36";
+            }
+
+            else if(15>score>10){
+        	 document.body.style.backgroundColor = "#066f1d";
+            }
+            else if(10<score){
+        	 document.body.style.backgroundColor = "#0b5394";
+            }
+            else if(0>score){
+        	 document.body.style.backgroundColor = "#E44C62";
+            }
+        }
+
+
+
+
+
+
+
+        // function to timer countdown 
+        function startTimer(){
+            var timerQuiz=60;
+            var action=setInterval(function(){
+                timerQuiz-=1;
+                document.getElementById("timer").innerHTML=timerQuiz;
+                if(timerQuiz==0){
+                    result();
+            }
+        },1000);
+
+        }
+
+        
+
+    </script>
+
+
+
+</body>
+</html>

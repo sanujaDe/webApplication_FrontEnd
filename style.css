@@ -1,0 +1,911 @@
+/* Importing the google font styles */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Staatliches&display=swap');
+
+
+:root {
+    --jasmine: #FFDE85;
+    --rich-black: #0a0a0a;
+    --scarlet: #f52d00;
+    --deep-saffron:#FFA047;
+    --areal-black:#141414;
+    --hr:#f0f0f01e;
+}
+
+body {background-color: var(--areal-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Staatliches', cursive;
+}
+
+hr{
+    width: 90%;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+    border-color: var(--hr)
+}
+/* ========================================= NAVIGATION BAR ==========================================*/
+.navigation-bar {
+    line-height: 40px;
+    background-color: var(--rich-black);
+    padding: 0 2cm;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.navigation-bar .navbar{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     color: #fff;
+}
+
+.navigation-bar .navbar .logo{
+    margin-top: 0.25cm ;
+    width: 70%;
+    align-items: center;
+}
+
+.navigation-bar .navbar .nav-items{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.navigation-bar .navbar .nav-items li{
+    list-style: none;
+}
+
+.navigation-bar .navbar .nav-items li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff;
+    padding-left: 5px;
+    transition: 0.4s ease;
+}
+
+.navigation-bar .navbar .nav-items li.active-page-home a{
+    color: var(--scarlet);
+}
+
+.navigation-bar .navbar .nav-items li a:hover{
+    color: var(--scarlet);
+}
+
+
+/* ========================================= PART 1 ==========================================*/
+
+.part1{
+    background-color: var(--areal-black);
+    padding-bottom: 2cm;
+}
+
+.part1 .main-collection {
+    width: 70%;
+    position: relative;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+
+
+.part1 .part1-text {
+    float: center;
+    position: absolute;
+    color: white;
+    top: 170px;
+    left:28%;
+    transform: translate(-25%,0);
+}
+
+
+.part1 .part1-text h3{
+    font-size: calc(.5rem + 5vw);
+    line-height: 85%;
+    
+}
+/* ========================================= back to top button ==========================================*/
+
+#topBtn{
+    position: fixed;
+    background-color: #f52d00;
+    color: #fff;
+    bottom: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius:2px;
+    font-size: 15px;
+    right: 25px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+#topBtn:hover{
+    background-color: var(--deep-saffron);
+    color: var(--rich-black);
+}
+/* ===================================================================================*/
+
+.men-or-women {
+    width: 70%;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 1.5cm;
+    padding-top: 1.5cm;
+    z-index: 10;
+    position: relative;
+}
+
+.men-or-women .cards-m-or-w{
+    width: 80%;
+    margin: 0 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+    transition: .4s;
+    position: relative;
+    justify-content: space-around;
+}
+
+.men-or-women .cards-m-or-w:hover{
+    transform: translateY(-20px);
+}
+
+.men-or-women .cards-m-or-w img{
+    display: block;
+    width: 100%;
+}
+
+.men-or-women .cards-m-or-w .info{
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 13%;
+    transform: translate(-25% 0);
+    transform: translateY(2cm);
+    transition: 0.5s all;
+    z-index: 22;
+}
+
+.men-or-women .cards-m-or-w:hover .info{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.men-or-women .cards-m-or-w .info h4{
+    position: absolute;
+    color: white;
+    font-size: calc(.5rem + 2vw);
+    transition: 0.4s all;
+}
+
+.men-or-women .cards-m-or-w:hover .info h4:hover{
+    color: var(--rich-black);
+}
+
+.men-or-women .cards-m-or-w::before{
+    content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(245, 45, 0));
+	z-index: 22;
+	transition: 0.5s all;
+	opacity: 0;
+}
+
+.men-or-women .cards-m-or-w:hover::before{
+    opacity: 1;
+}
+
+
+/* ========================================= PART 2 ==========================================*/
+
+.part2 {
+    background-color: var(--areal-black);
+}
+
+.part2 .header-p2{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 5% auto 2%;
+    transform: translate(-25% 0);
+    justify-content: center;
+}
+
+.part2 .header-p2 h3{
+    font-size: calc(.5rem + 5vw);
+    color: white;
+}
+
+.available-collection{
+    width: 70%;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 2cm;
+    z-index: 10;
+    position: relative;
+}
+
+.available-collection .card-available{
+    width: 80%;
+    margin: 0 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+    transition: .4s;
+    position: relative;
+    justify-content: space-around;
+}
+
+.available-collection .card-available img{
+    display: block;
+    width: 100%;
+}
+
+.available-collection .card-available:hover{
+    transform: scale(1.1);
+    z-index: 4;
+}
+
+.available-collection .card-available .info{
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 13%;
+    transform: translate(-25% 0);
+    transform: translateY(2cm);
+    transition: 0.5s all;
+    z-index: 22;
+    
+}
+
+.available-collection .card-available:hover .info{
+    opacity: 1;
+    transform: translateY(0);
+    
+}
+
+.available-collection .card-available:hover h4:hover{
+    color: #0a0a0a;;
+}
+
+.available-collection .card-available h4{
+    position: absolute;
+    color: white;
+    font-size: calc(.5rem + 2vw);
+    transition: 0.4s all;
+}
+
+.available-collection .card-available::before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(245, 45, 0));
+	z-index: 22;
+	transition: 0.5s all;
+	opacity: 0;
+}
+
+.available-collection .card-available:hover::before{
+    opacity: 1;
+}
+
+
+
+/* ========================================= PART 3 ==========================================*/
+
+.part3 .header-p3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.part3 .header-p3 h3{
+    font-size: calc(.1rem + 3vw);
+    color: white;
+}
+
+.part3 .body-p3{
+    padding-top: 1%;
+}
+
+.part3 .body-p3 h4{
+    font-size: calc(.1rem + 2vw);
+    color: var(--deep-saffron);
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    
+}
+
+.part3 .query-btn-mainpg{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+
+.part3 .query-btn-mainpg .btn{
+    background-color: var(--scarlet);
+    color: var(--areal-black);
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    font-size: calc(.1rem + 2vw);
+    border: none;
+    transition: 0.4s;
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.37);
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.part3 .query-btn-mainpg .btn:hover{
+    background-color: var(--deep-saffron);
+}
+
+/* ========================================= PART 4 ==========================================*/
+
+.part4 .btn{
+    background-color: var(--scarlet);
+    color: var(--areal-black);
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    font-size: calc(.1rem + 2vw);
+    border: none;
+    transition: 0.4s;
+    box-shadow: 0px 7px 8px rgba(41, 41, 41, 0.555);
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+.part4 .button-gallery{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.part4 .btn:hover{
+    background-color: var(--deep-saffron);
+}
+
+
+.part4 .view-gallery .set1{
+    padding-top: 2%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 10;
+    position: relative;
+}
+.part4 .view-gallery .set2{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 10;
+    position: relative;
+}
+
+
+.part4 .view-gallery img{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    filter: grayscale(100%);
+    transition: 0.4s all;
+}
+.part4 .view-gallery img:hover{
+    filter: grayscale(0%);
+}
+
+/* ========================================= Footer ==========================================*/
+
+.footer-container{
+    background-color: var(--rich-black);
+    padding: 4rem 0 2rem 0;
+}
+
+.footer-container .logo-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container .footer{
+    width: 80%;
+    height: 60%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+
+.footer-container .footer .footer-heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.footer-container .footer .footer-heading h3{
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #949494;
+}
+
+.footer-container .footer .footer-heading a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: 0.4s all;
+    text-align: left;
+}
+
+.footer-container .footer .footer-heading a:hover{
+    color: #f52d00;
+}
+
+/* ========================================= Page editor link ==========================================*/
+
+.footer-container .page-editor-link a{
+    text-decoration: none;
+    color: rgb(112, 112, 112);
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #141414;
+    transition: 0.4s;
+}
+
+.footer-container .page-editor-link a:hover{
+    color: #fff;
+    border: none;
+    background-color: var(--scarlet);
+}
+
+
+.footer-container .page-editor-link{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    
+}
+
+/* ========================================= About Us - Sanuja ==========================================*/
+
+
+.about-us .header-about{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 5% auto 2%;
+    transform: translate(-25% 0);
+    justify-content: center;
+}
+
+.about-us .header-about h3{
+    font-size: calc(.2rem + 2vw);
+    color: white;
+}
+
+
+.our-group{
+    width: 70%;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 4%;
+    z-index: 10;
+    position: relative;
+}
+
+.our-group .about-card{
+    width: 80%;
+    margin: 0 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+    transition: .4s;
+    position: relative;
+    justify-content: space-around;
+}
+
+.our-group .about-card img{
+    display: block;
+    width: 100%;
+}
+
+.our-group .about-card:hover{
+    transform: scale(1.1);
+    z-index: 4;
+}
+
+.our-group .about-card .info{
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 13%;
+    transform: translate(-25% 0);
+    transform: translateY(2cm);
+    transition: 0.5s all;
+    z-index: 22;
+    
+}
+
+.our-group .about-card:hover .info{
+    opacity: 1;
+    transform: translateY(0);
+    
+}
+
+
+.our-group .about-card h4{
+    position: absolute;
+    color: white;
+    font-size: calc(.5rem + 2vw);
+}
+
+.our-group .about-card p{
+    position: absolute;
+    color: var(--rich-black);
+    position: relative;
+    padding-top: 35%;
+    font-size: calc(.2rem + 2vw)
+}
+
+.our-group .about-card::before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(245, 45, 0));
+	z-index: 22;
+	transition: 0.5s all;
+	opacity: 0;
+}
+
+.our-group .about-card:hover::before{
+    opacity: 1;
+}
+
+
+.about-us .student-details p {
+    font-size: calc(.1rem + 1vw);
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    justify-content: left;
+    padding-top: 0.5%;
+    
+}
+
+/*================================================ Quiz - Sanuja ================================================ */
+.quiz h3 {
+    display: flex;
+    justify-content: center;
+    color: var(--scarlet);
+    font-size: calc(.4rem + 1vw);
+    padding: 10px;
+}
+
+.quiz .to-start{
+    color: white;
+    width: 40%;
+    margin: 0 auto;
+    font-size: calc(.3rem + 1vw);
+    text-align: justify;
+    padding-bottom: 40px;
+}
+
+.quiz .to-start .startButton{
+    border: none;
+    padding: 2px;
+    font-size: calc(.4rem + 1vw);
+    background-color: var(--scarlet);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.4s;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.quiz .to-start .startButton:hover{
+    background-color: var(--deep-saffron);
+}
+
+.quiz .after-start{
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 40px 60px;
+}
+.quiz .after-start #timerQuiz{
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--rich-black);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    
+}
+.quiz .after-start #timerQuiz p{
+    display: flex;
+    justify-content: center;
+    font-size: calc(.4rem + 1vw);
+    padding: 10px;
+}
+.quiz .after-start .question{
+    padding: 30px 40px
+}
+
+.quiz .after-start .question p{
+    font-size: 24px;
+}
+.quiz .after-start .question .ans{
+    padding: 20px 50px;
+    font-size: 18px;
+}
+
+.quiz .after-start h2{
+    font-size: 30px;
+    padding: 10px;
+    background-color: var(--rich-black);
+    color: white;
+    text-align: center;
+}
+
+
+.quiz .after-start .submitBtn{
+    border: none;
+    padding: 5px;
+    font-size: 25px;
+    background-color: var(--scarlet);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.4s;
+    margin-left: 70px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.quiz .after-start .submitBtn:hover{
+    background-color: var(--deep-saffron);
+}
+
+.quiz .after-start .ans .qAns{
+    color: #0a0a0a;
+}
+.quiz .after-start #restart{
+    text-decoration: none;
+    color: var(--rich-black);
+    border: none;
+    padding: 5px;
+    font-size: 25px;
+    background-color: var(--scarlet);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.4s;
+    margin-left: 30px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+
+}
+.quiz .after-start #restart:hover{
+    background-color: var(--deep-saffron);
+}
+.quiz .after-start .ans p{
+    font-size: 20px;
+}
+
+.quiz .after-start .buttons-quiz{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*================================================ Page editor ================================================ */
+
+
+.page-editor .header-page-editor{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 5% auto 2%;
+    transform: translate(-25% 0);
+    justify-content: center;
+}
+
+.page-editor .header-page-editor h3{
+    font-size: calc(.2rem + 2vw);
+    color: white;
+}
+
+
+
+.details-page-editor{
+    width: 30%;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 4%;
+    z-index: 10;
+    position: relative;
+}
+
+.details-page-editor .image-page-editor{
+    width: 80%;
+    margin: 0 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+    transition: .4s;
+    position: relative;
+    justify-content: space-around;
+}
+
+.details-page-editor .image-page-editor img{
+    display: block;
+    width: 100%;
+}
+
+.details-page-editor .image-page-editor:hover{
+    transform: scale(1.1);
+    z-index: 4;
+}
+
+.details-page-editor .image-page-editor .info{
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 15%;
+    right: 15%;
+    transform: translate(-25% 0);
+    transform: translateY(2cm);
+    transition: 0.8s all;
+    z-index: 22;
+    
+}
+
+.details-page-editor .image-page-editor:hover .info{
+    opacity: 1;
+    transform: translateY(-60%);
+    
+}
+
+
+.details-page-editor .image-page-editor h4{
+    position: absolute;
+    color: white;
+    font-size: calc(.5rem + 2vw);
+}
+
+.details-page-editor .image-page-editor p{
+    position: absolute;
+    color: var(--rich-black);
+    position: relative;
+    padding-top: 35%;
+    font-size: calc(.2rem + 2vw)
+}
+
+.details-page-editor .image-page-editor::before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(245, 45, 0));
+	z-index: 22;
+	transition: 0.5s all;
+	opacity: 0;
+}
+
+.details-page-editor .image-page-editor:hover::before{
+    opacity: 1;
+}
+
+
+.page-editor .info p {
+    font-size: calc(.1rem + 1vw);
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    justify-content: left;
+    padding-top: 0.5%;
+
+}
+.page-editor .info{
+    padding: 10%;
+    background-color: var(--rich-black);}
+
+    /*================================================ Additional Page ================================================ */
+
+.additional{
+    color: white;
+
+}
+
+.additional p{
+    text-align: justify;
+    text-justify: inter-word;
+} 
+
+.additional .football {
+
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.additional .basketball{
+
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.additional .cricket{
+
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.additional .img-ad{
+    display: flex;
+    justify-content: center;
+}
+
+.additional legend{
+    color: var(--scarlet);
+    font-size: 30px;
+}
+
+.additional .back-to-top{
+    position: fixed;
+    background-color: #f52d00;
+    color: #fff;
+    bottom: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius:2px;
+    font-size: 15px;
+    right: 25px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.additional .back-to-top a{
+    text-decoration: none;
+    color: var(--rich-black);
+}
+.additional .back-to-top:hover{
+    background-color: var(--deep-saffron);
+    
+}
